@@ -355,8 +355,8 @@ def redraw_cb(b):
 def can_handle():
     # packs the CAN data into 4 bytes in int form and then appends to a list
     global send_list, xpos_val_num, refx_pos_val, refy_pos_val, ypos_val_num
-    refx_pos_val = us.unpack("4B", us.pack('>f', (float(xpos_val_num[0]) * 0.001)))
-    refy_pos_val = us.unpack("4B", us.pack('>f', (float(ypos_val_num[0]) * 0.001)))
+    refx_pos_val = us.unpack("4B", us.pack('>f', (float(xpos_val_num[0]) / 0.001)))
+    refy_pos_val = us.unpack("4B", us.pack('>f', (float(ypos_val_num[0]) / 0.001)))
     send_list = []
     for x in refx_pos_val:
         send_list.append(x)
