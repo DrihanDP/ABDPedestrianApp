@@ -511,10 +511,10 @@ def main():
     baudrate_button = LoopingButton(500, 120, 160, 60, [x[0] for x in baudrate_dir.values()], 30, set_baudrate)
     refreshrate_button = LoopingButton(500, 360, 160, 60, [x[0] for x in outputrate_dir.values()], 30, set_outputrate)
     bank = Image_Bank((
-        ('/icon-reset.png', 'Reset'),
-        ('/icon-settings.png', 'Settings'),
-        ('/icon-record.png', 'Record'),
-        ('/icon-exit.png', 'Exit'),
+        ('/sd/icon-reset.png', 'Reset'),
+        ('/sd/icon-settings.png', 'Settings'),
+        ('/sd/icon-record.png', 'Record'),
+        ('/sd/icon-exit.png', 'Exit'),
     ))
     
     init_buttons()
